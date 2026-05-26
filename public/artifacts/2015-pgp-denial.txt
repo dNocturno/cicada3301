@@ -1,0 +1,19 @@
+DATE: July 27, 2015
+CHANNEL: Twitter @1231507051321 → Pastebin
+PGP KEY: 7A35090F (0x181F01E57A35090F)
+
+CONTENT:
+PGP-signed statement denying Cicada 3301 involvement in the
+Planned Parenthood data breach (news event, mid-2015).
+
+SIGNIFICANCE:
+- Confirmed PGP key 7A35090F still in active use as of July 2015
+- First communication after the 2013 silence
+- Confirmed the organization was monitoring its public reputation
+- Distinguished Cicada's mission (privacy advocacy) from criminal hacking
+
+NOTE: Original Pastebin URL no longer resolves.
+Content preserved in community archives.
+
+Source: Uncovering Cicada Wiki
+https://uncovering-cicada.fandom.com/wiki/Cicada_3301

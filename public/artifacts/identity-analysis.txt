@@ -1,0 +1,41 @@
+CICADA 3301 — IDENTITY ANALYSIS
+Reconstructed from documented community research
+
+NOTE: No primary source document exists for this analysis.
+This is a summary of confirmed capabilities and documented theories.
+
+CONFIRMED CAPABILITIES:
+- Global physical presence: 14 GPS coordinates across 5 continents (2012)
+- Physical poster deployment: Warsaw, Paris, Seoul, Sydney, Hawaii,
+  Miami, New Orleans, Seattle, Fayetteville, Chino, and others
+- Cryptographic sophistication: PGP, OutGuess, RSA, Vigenère, SSSS,
+  Diffie-Hellman, columnar transposition, OpenPuff, Tor hidden services
+- Custom cipher development: Gematria Primus (29 runes to 29 primes)
+- Custom OS development: Cicada OS (Tiny Core Linux, 130MB ISO)
+- Literary and artistic knowledge: Mabinogion, Agrippa, Goya, Blake,
+  Waterhouse, Book of the Law (Aleister Crowley)
+- Sustained operation: 2012–2017 (5+ years, consistent January 4 timing)
+- Operational security: canary traps, individual unique puzzles
+
+THEORY 1 — Intelligence Agency Recruitment:
+Supporting: canary traps, operational security testing, global reach,
+            dead man's switch tasking, cryptographic proficiency
+Against: anti-institutional philosophy, privacy-for-whistleblowers mission,
+         inconsistency with standard intelligence agency culture
+
+THEORY 2 — Private Cryptography Collective:
+Supporting: privacy-first ideology, dead man's switch assignment,
+            censorship-resistance focus, no state branding
+Against: level of global coordination and resources required
+
+THEORY 3 — Conceptual Art Project:
+Supporting: philosophical content of Liber Primus, ARG precedents
+Against: confirmed post-puzzle operational tasks given to winners
+
+THEORY 4 — Elaborate Hoax:
+Supporting: no definitive public identification of organization
+Against: multiple confirmed winners with accounts of real post-puzzle work,
+         Marcus Wanner (age 15) independently confirmed his solve
+
+CONCLUSION: Identity unconfirmed. All four theories remain viable.
+"Beware false paths. Always verify PGP signature from 7A35090F."

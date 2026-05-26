@@ -1,0 +1,31 @@
+TELNET HIDDEN SERVICE: emiwp4muu2ktwknf.onion
+Year: 2013
+Access: telnet via Tor network
+
+INTERACTIVE SHELL COMMANDS:
+RAND    — Request random data
+QUINE   — Request a quine (self-replicating program)
+BASE29  — Base-29 encoding/decoding
+CODE    — Submit code solution
+KOAN    — Receive a koan (philosophical question)
+DH      — Diffie-Hellman key exchange
+NEXT    — Proceed to next step
+GOODBYE — Terminate session
+
+PUZZLE DESIGN:
+Each participant received a UNIQUE set of numeric encryption puzzles.
+Uniqueness was a canary trap: shared answers would identify the leaker.
+Participants had to create their own Tor hidden services with CGI upload,
+then post magic squares and their .onion URLs.
+
+SSSS (Shamir's Secret Sharing Scheme) fragments were distributed across
+physical poster locations. Multiple participants needed to combine shares.
+
+19 philosophical and technical questions were posed through the shell,
+evaluating both cryptographic knowledge and ideological alignment.
+
+COMMUNITY RECREATION:
+dontquitownit.com:3301 (historical recreation; may no longer be active)
+
+Source: Uncovering Cicada Wiki — The Telnet Prompt
+https://uncovering-cicada.fandom.com/wiki/The_Telnet_Prompt

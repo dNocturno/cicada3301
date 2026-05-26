@@ -1,65 +1,86 @@
-import Image from "next/image";
+import Link from 'next/link';
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+      <div className="max-w-2xl w-full space-y-10">
+
+        {/* Logo/title block */}
+        <div className="text-center space-y-3">
+          <p className="text-xs tracking-[0.4em] text-dim uppercase">
+            January 4, 2012 — April 4, 2017
+          </p>
+          <h1 className="text-4xl font-bold tracking-widest uppercase glow" style={{ color: '#00ff41' }}>
+            CICADA 3301
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-sm tracking-[0.2em] text-dim uppercase">
+            Interactive History
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Divider */}
+        <div className="border-t border-border-green" />
+
+        {/* Intro text */}
+        <div className="space-y-4 text-sm leading-7" style={{ color: '#00ff41' }}>
+          <p>
+            Between 2012 and 2017, an anonymous organization known only as Cicada 3301
+            ran three puzzle rounds of escalating cryptographic complexity — and then went silent.
+          </p>
+          <p>
+            Every image, coordinate, cipher, and quote in this game comes from documented
+            Cicada 3301 history. Nothing has been invented. Where artifacts are unavailable,
+            the source is cited.
+          </p>
+          <p>
+            You will not solve Liber Primus. No one has. But you will understand
+            how it was built.
+          </p>
         </div>
-      </main>
-    </div>
+
+        {/* Warning box */}
+        <div
+          className="border p-4 text-xs leading-6 space-y-1"
+          style={{ borderColor: '#1a3322', background: '#0d0d0d', color: '#00801f' }}
+        >
+          <p>
+            <span style={{ color: '#00ff41' }}>NOTICE:</span> This is a documentary game.
+            All cryptographic puzzles presented are historical — they have already been solved
+            or remain unsolved by the real-world community.
+          </p>
+          <p>
+            PGP key 7A35090F has not been revoked. No new signed messages have appeared since April 2017.
+          </p>
+        </div>
+
+        {/* Navigation */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            href="/stage/1"
+            className="flex-1 text-center border py-3 px-6 text-sm font-bold tracking-widest uppercase transition-all hover:bg-phosphor hover:text-terminal hover:glow-box"
+            style={{ borderColor: '#00ff41', color: '#00ff41' }}
+          >
+            BEGIN — JANUARY 4, 2012
+          </Link>
+          <Link
+            href="/timeline"
+            className="flex-1 text-center border py-3 px-6 text-sm tracking-widest uppercase transition-colors"
+            style={{ borderColor: '#1a3322', color: '#00801f' }}
+          >
+            TIMELINE
+          </Link>
+        </div>
+
+        <div className="flex gap-6 text-xs justify-center" style={{ color: '#00801f' }}>
+          <Link href="/tools" className="hover:text-phosphor transition-colors tracking-wider uppercase">Tools</Link>
+          <Link href="/sources" className="hover:text-phosphor transition-colors tracking-wider uppercase">Sources</Link>
+        </div>
+
+        {/* Footer */}
+        <p className="text-center text-xs" style={{ color: '#003311' }}>
+          30 stages · 4 acts · 2012–2017 · Liber Primus unsolved
+        </p>
+      </div>
+    </main>
   );
 }

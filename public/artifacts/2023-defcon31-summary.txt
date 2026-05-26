@@ -1,0 +1,25 @@
+DEF CON 31 — August 2023
+Las Vegas, Nevada
+
+TALK: "Cracking Cicada 3301: The Future of Collaborative Puzzle-Solving"
+SPEAKERS: Taiiwo, Artorias, Puck, TheClockworkBird
+
+CONTENT SUMMARY:
+- Current state of Liber Primus research (as of 2023)
+- Approximately 17 pages solved; ~41 pages remain unsolved
+- Review of all known cipher methods applied to LP
+- Proposed structured approaches for community collaboration
+- Discussion of frequency analysis, index of coincidence,
+  and machine learning approaches attempted
+
+COMMUNITY STATE (as of 2023-2024):
+- Discord: ~7,000 members
+- Reddit r/cicada: ~21,000 followers
+- IRC: #cicadasolvers
+- GitHub: github.com/cicada-solvers
+
+STATUS: No breakthrough announced at or after DEF CON 31.
+Liber Primus remains unsolved.
+
+Source: DEF CON 31 speaker list
+https://www.defcon.org/html/defcon-31/dc-31-speakers.html

@@ -1,0 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+The key has always been right in front of your eyes.
+
+This isn't the quest for the Holy Grail.  Stop making
+it more difficult than it is.
+
+Good luck.
+
+3301
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQIcBAEBAgAGBQJPCBl3AAoJEBgfAeV6NQkPo6EQAKghp7ZKYxmsYM96iNQu5GZV
+fbjUHsEL164ZLctGkgZx2H1HyYFEc6FGvcfzqs43vV/IzN4mK0SMy2qFPfjuG2JJ
+tv3x2QfHMM3M2+dwX30bUD12UorMZNrLo8HjTpanYD9hL8WglbSIBJhnLE5CPlUS
+BZRSx0yh1U+wbnlTQBxQI0xLkPIz+xCMBwSKl5BaCb006z43/HJt7NwynqWXJmVV
+[signature truncated for display]
+-----END PGP SIGNATURE-----
+
+Signed: January 7, 2012, 11:07 CET
+RSA key ID: 7A35090F
+Verified: Good signature from "Cicada 3301 (845145127)"
+
+Source: Extracted from 8D7hN.jpg ("Problems?") via OutGuess steganography tool.
+Original image posted to 4chan /x/ board, January 2012.

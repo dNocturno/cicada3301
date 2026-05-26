@@ -1,0 +1,20 @@
+ONION: avowyfgl5lkzfj3n.onion
+CIPHER: Columnar Transposition
+PERIOD: 7 (columns of 7 characters)
+KEY: 1736254 (column reading order)
+
+DECRYPTION METHOD:
+Write ciphertext in rows of 7.
+Read columns in order: 1, 7, 3, 6, 2, 5, 4.
+(Key 1736254 specifies column read sequence.)
+
+PLAINTEXT:
+TO BELIEVE TRUTH IS TO DESTROY POSSIBILITY Q4UTGDI2N4M4UIM59133
+
+NOTE:
+The trailing string Q4UTGDI2N4M4UIM59133 is the next onion address
+concatenated with the plaintext message.
+Next onion: q4utgdi2n4m4uim5.onion
+
+Source: Connor Tumbleson — Puzzle 3 Solve Part 1
+https://connortumbleson.com/2021/02/15/the-cicada-3301-mystery-puzzle-3-part1/
