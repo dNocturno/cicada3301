@@ -41,6 +41,13 @@ export type Stage = {
       sourceUrl: string;
     }[];
   };
+  inlineMedia?: {
+    afterParagraph: number;
+    src: string;
+    caption: string;
+    sourceUrl: string;
+    authenticity: 'confirmed' | 'disputed' | 'reconstructed';
+  }[];
   sources: string[];
 };
 
@@ -105,7 +112,7 @@ export const stages: Stage[] = [
       'Running the open-source OutGuess steganography tool against the original JPEG extracted a hidden PGP-signed message. OutGuess works by embedding data in the least-significant bits of a JPEG\'s DCT coefficients — changes imperceptible to the human eye but recoverable with the correct tool.',
       'The extracted message was signed with PGP key ID 7A35090F (full fingerprint: 0x181F01E57A35090F). Every subsequent authentic Cicada 3301 message would be signed with this same key, allowing verification of legitimacy. The community used this signature to distinguish real Cicada communications from impostors throughout the following years.',
       'The message itself read: "WOOPS Just decoys this way. Looks like you can\'t guess, Pirats." — a misdirection. A second image ("Problems?") contained the real message: "The key has always been right in front of your eyes. This isn\'t the quest for the Holy Grail. Stop making it more difficult than it is. Good luck. 3301"',
-      'The key referenced in the "Problems" message was the subreddit URL — the hexadecimal full name of the Reddit page r/a2e7j6ic78h0j, which decoded to a numeric sequence used to unlock the scrambled Mabinogion text posted there.',
+      'The key referenced in the "Problems" message was the subreddit URL — the hexadecimal full name of the Reddit page [r/a2e7j6ic78h0j](https://www.reddit.com/r/a2e7j6ic78h0j/), which decoded to a numeric sequence used to unlock the scrambled Mabinogion text posted there.',
     ],
     artifact: {
       type: 'text',
@@ -151,7 +158,7 @@ export const stages: Stage[] = [
     dateDisplay: 'January 6, 2012',
     title: 'The Book Cipher',
     narrative: [
-      'The Reddit post r/a2e7j6ic78h0j contained a scrambled passage. Once decoded using the hexadecimal subreddit name as a shift key, it revealed a passage from The Mabinogion — an 11th-century collection of Welsh mythology. The decoding process required shifting each character in the scrambled text by the corresponding number in the key sequence.',
+      'The Reddit post [r/a2e7j6ic78h0j](https://www.reddit.com/r/a2e7j6ic78h0j/) contained a scrambled passage. Once decoded using the hexadecimal subreddit name as a shift key, it revealed a passage from The Mabinogion — an 11th-century collection of Welsh mythology. The decoding process required shifting each character in the scrambled text by the corresponding number in the key sequence.',
       'The decoded Mabinogion passage began: "King Arthur was at Caerlleon upon Usk; and one day he sat in his chamber; and with him were Owain the son of Urien, and Kynon the son of Clydno..." This was the source text for a book cipher hidden in the two OutGuess messages.',
       'The book cipher used line:character notation. For example, "1:29" meant line 1, character 29 of the Mabinogion passage. Working through the cipher table — which included special entries like "the product of the first two primes" (= 6, for \'f\') and "the first prime" (= 2, for \'b\') — produced the sentence: "Call us at us telephone number two one four three nine oh nine six oh eight."',
       'The phone number was: (214) 390-9608.',
@@ -186,6 +193,15 @@ export const stages: Stage[] = [
     resolution: {
       explanation: 'The complete book cipher decoded to "Call us at us telephone number two one four three nine oh nine six oh eight" — the phone number (214) 390-9608. The use of mathematical expressions for prime products was an early signal of Cicada\'s preoccupation with prime numbers, which would become central to Liber Primus two years later.',
     },
+    inlineMedia: [
+      {
+        afterParagraph: 1,
+        src: '/artifacts/mabinogion-manuscript.jpg',
+        caption: 'Jesus College MS 111 — a medieval Welsh manuscript containing the Mabinogion tales used as the book cipher source in 2012. Public domain.',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Jesus-College-MS-111_00349_175r_(cropped_%26_lightened).jpg',
+        authenticity: 'confirmed',
+      },
+    ],
     sources: [
       'https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2012)',
     ],
@@ -200,7 +216,7 @@ export const stages: Stage[] = [
     narrative: [
       'Calling (214) 390-9608 connected to a pre-recorded message. The recording said: "Very good. You have done well. There are three prime numbers associated with the original final.jpg image. 3301 is one of them. You will have to find the other two. Multiply all three of these numbers together and add a .com to find the next step. Good luck. Goodbye."',
       'The original 4chan image was 509 pixels wide and 503 pixels tall. Both 509 and 503 are prime numbers. Multiplying all three primes together: 509 × 503 × 3301 = 845,145,127.',
-      'Adding ".com" gave the URL 845145127.com — a website that was already live and waiting.',
+      'Adding ".com" gave the URL [845145127.com](https://web.archive.org/web/20120109000000*/845145127.com) — a website that was already live and waiting.',
     ],
     artifact: {
       type: 'audio',
@@ -241,6 +257,15 @@ export const stages: Stage[] = [
         },
       ],
     },
+    inlineMedia: [
+      {
+        afterParagraph: 1,
+        src: '/artifacts/2012-cicada-845145127.jpg',
+        caption: 'Tosena splendida cicada image from 845145127.com. Photo by Pascal Goetgheluck, April 24, 2008.',
+        sourceUrl: 'https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2012)',
+        authenticity: 'confirmed',
+      },
+    ],
     sources: [
       'https://www.youtube.com/watch?v=k24ZrFR2IUQ',
       'https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2012)',
@@ -304,7 +329,7 @@ export const stages: Stage[] = [
     location: { lat: 52.216802, lng: 21.018334, name: 'Oleandrów 6, Warsaw, Poland' },
     narrative: [
       'Participants who visited the GPS coordinates found white paper posters stenciled with a cicada image and a QR code. The QR codes linked to unique image files on 845145127.com. Each image again contained OutGuess-embedded data.',
-      'The OutGuess-decoded messages from the physical locations were different from each other, but they all contained a book cipher — this time referencing William Gibson\'s "Agrippa (A Book of the Dead)" (1992). Agrippa is a poem distributed on floppy disk, designed to encrypt itself and become unreadable after a single viewing. Its use was not accidental.',
+      'The OutGuess-decoded messages from the physical locations were different from each other, but they all contained a book cipher — this time referencing [William Gibson\'s "Agrippa (A Book of the Dead)"](https://en.wikipedia.org/wiki/Agrippa_(A_Book_of_the_Dead)) (1992). Agrippa is a poem distributed on floppy disk, designed to encrypt itself and become unreadable after a single viewing. Its use was not accidental.',
       'Message 1 (from Arkansas and Miami images) opened: "In twenty-nine volumes, knowledge was once contained. How many lines of the code remained when the Mabinogion paused? Go that far in from the beginning and find my first name." It then listed book cipher coordinates.',
       'Message 2 (from Warsaw and Sydney images) opened: "A poem of fading death, named for a king / Meant to be read only once and vanish / Alas, it could not remain unseen." The book cipher entries for both messages decoded to .onion addresses — Tor hidden services.',
     ],
@@ -368,7 +393,7 @@ export const stages: Stage[] = [
       'The .onion addresses from the Agrippa cipher led to Tor hidden services — websites accessible only through the Tor anonymity network. Accessing them required installing Tor Browser and understanding how the network\'s routing worked.',
       'The onion sites ran interactive challenges. Each participant received a unique RSA modulus factoring puzzle — a large semi-prime number that had to be factored into its two prime components. This was computationally intensive but not infeasible, and was designed to confirm that participants understood public-key cryptography.',
       'A MIDI file was also part of the 2012 onion challenge. The musical puzzle required participants to analyze the audio data for embedded content.',
-      'A "second chance" message appeared later, referencing John William Waterhouse\'s 1888 painting "The Lady of Shalott" and William Blake\'s work — literary references consistent with Cicada\'s recurring use of Romantic and Victorian-era texts. Those who had shared solutions publicly were excluded; those who had worked privately remained in contention.',
+      'A "second chance" message appeared later, referencing John William Waterhouse\'s 1888 painting ["The Lady of Shalott"](https://en.wikipedia.org/wiki/The_Lady_of_Shalott_(painting)) and William Blake\'s work — literary references consistent with Cicada\'s recurring use of Romantic and Victorian-era texts. Those who had shared solutions publicly were excluded; those who had worked privately remained in contention.',
     ],
     artifact: {
       type: 'image',
@@ -464,7 +489,7 @@ export const stages: Stage[] = [
     title: 'The Second Round',
     narrative: [
       'Exactly one year after the first image, a new image appeared on 4chan. The 2013 puzzle began with a JPEG posted to the same /x/ board. The Cicada pattern was now recognizable: January 4th, an image with hidden content, PGP-signed verification.',
-      'The 2013 image contained OutGuess data that led to Twitter account @1231507051321 — a sequence of prime numbers. The Twitter account posted clues throughout the puzzle chain.',
+      'The 2013 image contained OutGuess data that led to Twitter account [@1231507051321](https://twitter.com/1231507051321) — a sequence of prime numbers. The Twitter account posted clues throughout the puzzle chain.',
       'The 2013 puzzle introduced two elements that would define Cicada\'s identity going forward: the Gematria Primus cipher system and the Cicada OS — a custom bootable Linux ISO that was central to the puzzle\'s middle section.',
     ],
     artifact: {
@@ -510,7 +535,7 @@ export const stages: Stage[] = [
     dateDisplay: 'January–February 2013',
     title: 'The Bootable ISO',
     narrative: [
-      'A critical discovery in the 2013 puzzle was a bootable Linux ISO — 3301.iso — approximately 130 megabytes in size. It was based on Tiny Core Linux and designed to be written to a USB drive and booted directly.',
+      'A critical discovery in the 2013 puzzle was a bootable Linux ISO — [3301.iso](https://archive.org/details/3301.iso) — approximately 130 megabytes in size. It was based on Tiny Core Linux and designed to be written to a USB drive and booted directly.',
       'The boot sequence displayed prime numbers counting upward: 3, 5, 7, 11, 13... until reaching 3301. The message "@1231507051321 The key is all around you. Good luck. 3301" appeared during boot.',
       'The ISO contained audio files with steganographic content and a custom environment for solving the next phase of the puzzle. The boot sequence itself contained the number 1033 displayed before the final 3301 — 1033 is also a prime number.',
       'Audio files in the ISO, when processed with specific tools, revealed further clues. Twitter hex codes from @1231507051321 XOR\'d with data from 761.mp3 produced additional message content.',
@@ -1124,6 +1149,15 @@ export const stages: Stage[] = [
         },
       ],
     },
+    inlineMedia: [
+      {
+        afterParagraph: 2,
+        src: '/artifacts/2014-liber-primus-pages-1-4.jpg',
+        caption: 'Liber Primus pages 0.0–0.1. The first confirmed solved pages — "A Warning" and "Welcome."',
+        sourceUrl: 'https://uncovering-cicada.fandom.com/wiki/Liber_Primus',
+        authenticity: 'confirmed',
+      },
+    ],
     sources: [
       'https://uncovering-cicada.fandom.com/wiki/Liber_Primus',
       'https://connortumbleson.com/2024/02/05/the-cicada-3301-mystery-puzzle-3-solve-part-2/',
@@ -1172,6 +1206,15 @@ export const stages: Stage[] = [
     resolution: {
       explanation: 'The Warning and Welcome pages of Liber Primus established the philosophical framework for everything that followed. The instar metaphor, the instruction to question and discover personal truth, the warning against blind acceptance — these themes run through all of Cicada\'s documented communications. The opening pages were designed to be read, not just decrypted.',
     },
+    inlineMedia: [
+      {
+        afterParagraph: 1,
+        src: '/artifacts/lp-page-01.jpg',
+        caption: 'Liber Primus page 0.1 — "WELCOME." Solved via direct Gematria Primus transliteration.',
+        sourceUrl: 'https://github.com/cicada-solvers/3301book',
+        authenticity: 'confirmed',
+      },
+    ],
     sources: [
       'https://github.com/cicada-solvers/3301book',
       'https://uncovering-cicada.fandom.com/wiki/Liber_Primus',
@@ -1286,7 +1329,7 @@ export const stages: Stage[] = [
     title: 'The First Silence',
     narrative: [
       'January 4, 2015 passed without a new puzzle. For the first time since 2012, there was no new Cicada image on the expected date. The community that had formed around the annual puzzle cycle was left waiting.',
-      'The silence was broken briefly on July 27, 2015. A PGP-signed statement was posted via @1231507051321 on Pastebin. The statement denied Cicada involvement in the Planned Parenthood data breach that had been in the news. The message was signed with key 7A35090F — confirming the PGP key was still in active use and that authenticated Cicada was still operational.',
+      'The silence was broken briefly on July 27, 2015. A PGP-signed statement was posted via [@1231507051321](https://twitter.com/1231507051321) on Pastebin. The statement denied Cicada involvement in the Planned Parenthood data breach that had been in the news. The message was signed with key [7A35090F](https://keys.openpgp.org/search?q=7A35090F) — confirming the PGP key was still in active use and that authenticated Cicada was still operational.',
       'The denial was significant for two reasons: it confirmed the organization was still active, and it demonstrated awareness of how their methods might be misappropriated. Cicada\'s tools and methods — steganography, Tor, PGP, anonymous coordination — were also used by hackers. The denial was an explicit rejection of association with those uses.',
     ],
     artifact: {
@@ -1379,10 +1422,10 @@ export const stages: Stage[] = [
     dateDisplay: 'April 29, 2017',
     title: 'The Final Message',
     narrative: [
-      'On April 29, 2017, a message signed "CicadaPG v.3301" was posted to Pastebin. The message had been PGP-signed on April 4, 2017 at 23:23 GMT, with key 0x181F01E57A35090F.',
+      'On April 29, 2017, a message signed "CicadaPG v.3301" was posted to Pastebin. The message had been PGP-signed on April 4, 2017 at 23:23 GMT, with key [0x181F01E57A35090F](https://keys.openpgp.org/search?q=181F01E57A35090F).',
       'The full message was: "Beware false paths. Always verify PGP signature from 7A35090F."',
       'This is the last known verified communication from Cicada 3301. The message was brief, operational, and urgent in character. It had no puzzle content — only a warning. Cicada was apparently aware of an increasing number of impostors and false puzzle chains circulating in their name, and was using one of their final authenticated communications to address this directly.',
-      'After April 2017, @1231507051321 has not posted new signed content. The PGP key 7A35090F remains theoretically valid — it has not been revoked — but no new messages signed with it have appeared.',
+      'After April 2017, [@1231507051321](https://twitter.com/1231507051321) has not posted new signed content. The PGP key [7A35090F](https://keys.openpgp.org/search?q=7A35090F) remains theoretically valid — it has not been revoked — but no new messages signed with it have appeared.',
     ],
     artifact: {
       type: 'text',
@@ -1479,7 +1522,7 @@ export const stages: Stage[] = [
     dateDisplay: 'August 2023 — Present',
     title: 'The Present',
     narrative: [
-      'At DEF CON 31 in August 2023, four researchers — Taiiwo, Artorias, Puck, and TheClockworkBird — presented "Cracking Cicada 3301: The Future of Collaborative Puzzle-Solving." The presentation documented the current state of Liber Primus research, the community\'s structure, and proposed new methodologies for approaching the unsolved pages.',
+      'At DEF CON 31 in August 2023, four researchers — Taiiwo, Artorias, Puck, and TheClockworkBird — presented ["Cracking Cicada 3301: The Future of Collaborative Puzzle-Solving"](https://www.youtube.com/watch?v=EU1ftYdZkkI). The presentation documented the current state of Liber Primus research, the community\'s structure, and proposed new methodologies for approaching the unsolved pages.',
       'The community as of 2024: Discord server with approximately 7,000 members, IRC channel #cicadasolvers, GitHub organization cicada-solvers, and Reddit community r/cicada with approximately 21,000 followers.',
       'Liber Primus remains unsolved. The approximately 41 uncracked pages have resisted 10+ years of continuous effort. No verified claim of solving them has been made by anyone — including Cicada itself. The PGP key 7A35090F has not been revoked. No new signed messages have appeared.',
       'The puzzle is open. The key to Liber Primus may be in the solved pages themselves — embedded in the plaintext waiting to be recognized. It may have been held back. It may require something no one has tried. Or it may be that the greatest cipher in internet history is its own answer: an unsolvable door that teaches more by remaining closed than it ever could by opening.',

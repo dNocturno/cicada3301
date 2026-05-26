@@ -3,6 +3,7 @@ import { stages } from '@/data/stages';
 import Sidebar from '@/components/Sidebar';
 import ArtifactDisplay from '@/components/ArtifactDisplay';
 import StageInteractive from '@/components/StageInteractive';
+import NarrativeBlock from '@/components/NarrativeBlock';
 
 export async function generateStaticParams() {
   return stages.map((s) => ({ id: String(s.id) }));
@@ -70,12 +71,8 @@ export default async function StagePage({
         <div className="border-t" style={{ borderColor: '#1a3322' }} />
 
         {/* Narrative */}
-        <section className="space-y-4">
-          {stage.narrative.map((para, i) => (
-            <p key={i} className="text-sm leading-7" style={{ color: '#00ff41' }}>
-              {para}
-            </p>
-          ))}
+        <section>
+          <NarrativeBlock paragraphs={stage.narrative} inlineMedia={stage.inlineMedia} />
         </section>
 
         {/* Artifact */}

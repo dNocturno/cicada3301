@@ -18,6 +18,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={ibm.variable}>
       <body style={{ fontFamily: 'var(--font-ibm), monospace' }}>
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundImage: 'url(/artifacts/2012-welcome-image.jpg)',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '60vmin',
+            opacity: 0.04,
+            pointerEvents: 'none',
+            zIndex: 0,
+          }}
+        />
         {children}
       </body>
     </html>
